@@ -1,0 +1,59 @@
+name: 🐛 Bug Report
+description: Create a report to help us improve acodez
+title: "[BUG] <Title>"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: version
+    attributes:
+      label: Acodez Version
+      description: What version of acodez are you using? (e.g., 1.0.8)
+      placeholder: "1.0.8"
+    validations:
+      required: true
+  - type: input
+    id: node_version
+    attributes:
+      label: Node.js / Environment
+      description: What version of Node.js or Termux are you using?
+      placeholder: "Node v20.x on Termux"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the Bug
+      description: A clear and concise description of what the bug is.
+      placeholder: I tried to run `acodez init` and it crashed...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior.
+      value: |
+        1. Run command '...'
+        2. Select option '...'
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Error Output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+    validations:
+      required: false
